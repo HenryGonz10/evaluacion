@@ -1,0 +1,48 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Productos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card shadow-lg">
+    <div class="card-header bg-white">
+        <div class="float-left">
+            @ViewBag.Title
+        </div>
+        <div class="float-right">
+            <a href="@Url.Action("Create", "producto")" class="btn btn-primary"><i class="fas fa-plus"></i> Crear</a>
+        </div>
+    </div>
+    <div class="card-body">
+        <table data-order='[[ 0, "asc" ]]' data-page-length='10' id="table" class="table table-responsive-sm table-responsive-md  table-responsive-lg align-items-center table-flush" width="100%" cellspacing="0">
+            <thead>
+                <tr>
+                    <th scope="col">Codigo</th>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Cantidad en bodega</th>
+                    <th scope="col">Precio Costo</th>
+                    <th scope="col">Precio de Venta</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var oElement in Model.productos)
+                {
+                    <tr>
+                        <td>@oElement.cod</td>
+                        <td>@oElement._producto</td>
+                        <td>@oElement.cantidad</td>
+                        <td>@oElement.costo</td>
+                        <td>@oElement.venta</td>
+                        <td><a href="@Url.Action("Edit","producto", new { id = oElement.id })"><center><i class="fas fa-edit" style="color:goldenrod" /></center></a></td>
+                        <td><a href="@Url.Action("Delete","producto", new { id = oElement.id })"><center><i class="fas fa-trash" style="color:red" /></center></a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+

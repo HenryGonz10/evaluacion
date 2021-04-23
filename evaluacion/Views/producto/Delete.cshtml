@@ -1,0 +1,48 @@
+﻿@model evaluacion.Models.lst.producto
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card bg-danger text-white shadow-lg">
+    <div class="form-horizontal">
+        <div class="card-header">
+            <h4>producto</h4>
+        </div>
+
+        <div class="card-body">
+            <h3>Desea eliminar este registro?</h3>
+
+            <dl class="dl-horizontal">
+                <dt>
+                    Codigo de Barras
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.cod)
+                </dd>
+
+                <dt>
+                    Producto
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model._producto)
+                </dd>
+            </dl>
+        </div>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color float-right">
+                <a href="@Url.Action("Index","Home")" class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</a>
+                &nbsp;
+                <input type="submit" value="Eliminar" class="btn btn-primary" />
+            </div>
+        }
+
+    </div>
+</div>

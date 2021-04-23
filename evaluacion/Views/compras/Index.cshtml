@@ -1,0 +1,50 @@
+﻿@model IEnumerable<evaluacion.Models.detalle_compra>
+
+@{
+    ViewBag.Title = "Compras";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card shadow-lg">
+    <div class="card-header bg-white">
+        <div class="float-left">
+            @ViewBag.Title
+        </div>
+        <div class="float-right">
+            <a href="@Url.Action("Create", "compras")" class="btn btn-primary"><i class="fas fa-plus"></i> Crear</a>
+        </div>
+    </div>
+    <div class="card-body">
+        <table data-order='[[ 0, "asc" ]]' data-page-length='10' id="table" class="table table-responsive-sm table-responsive-md  table-responsive-lg align-items-center table-flush" width="100%" cellspacing="0">
+            <thead>
+                <tr>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Distribuidor</th>
+                    <th scope="col">Total</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.compra.fecha)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.compra.proveedor.provedor_nombre)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.monto)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.iddetalle_compra }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.iddetalle_compra }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.iddetalle_compra })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,182 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.navigation {
+    position: static;
+    top: 50px;
+    right: 50px;
+    height: 50px;
+    width: 250px;
+    height: 50px;
+    border-radius: 6px;
+    transition: 0.5s;
+    z-index: 100000;
+    overflow: hidden;
+}
+
+    .navigation.active {
+        height: 200px;
+    }
+
+    .navigation .toggle {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background-color: red;
+        color: #ffff;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0 20px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+        .navigation .toggle:before {
+            content: 'Menú';
+            margin-right: 10px;
+        }
+
+        .navigation .toggle.active:before {
+            content: 'Cerrar Menú';
+            margin-right: 10px;
+        }
+
+        .navigation .toggle span {
+            position: relative;
+            width: 20px;
+            height: 50px;
+        }
+
+            .navigation .toggle span::before {
+                content: '';
+                position: absolute;
+                top: 20px;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background: #fff;
+                transition: 0.5s;
+            }
+
+            .navigation .toggle span::after {
+                content: '';
+                position: absolute;
+                bottom: 20px;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background: #fff;
+                transition: 0.5s;
+            }
+
+        .navigation .toggle.active span::before {
+            transform: rotate(225deg);
+            top: 24px;
+        }
+
+        .navigation .toggle.active span::after {
+            transform: rotate(135deg);
+            bottom: 24px;
+        }
+
+    .navigation ul {
+        position: relative;
+        background: #111;
+    }
+
+        .navigation ul li {
+            list-style: none;
+        }
+
+            .navigation ul li a {
+                position: relative;
+                text-decoration: none;
+                display: block;
+                padding: 10px;
+                20px;
+                height: 50px;
+                color: #fff;
+                font-size: 18px;
+                transition: 1x;
+            }
+
+                .navigation ul li a:hover {
+                    transition: 0s;
+                    background-color: red;
+                }
+
+.header {
+    position: relative
+}
+
+.pb-6,
+.py-6 {
+    padding-bottom: 4.5rem !important
+}
+
+.pb-8,
+.py-8 {
+    padding-bottom: 8rem !important
+}
+
+.pt-5,
+.py-5 {
+    padding-top: 3rem !important
+}
+
+.pt-md-8,
+.py-md-8 {
+    padding-top: 8rem !important
+}
+
+.mt--7,
+.my--7 {
+    margin-top: -6rem !important
+}
+
+.wrapper {
+    margin-right: auto; /* 1 */
+    margin-left: auto; /* 1 */
+    max-width: 100%; /* 2 */
+    padding-right: 0; /* 3 */
+    padding-left: 0; /* 3 */
+}
+
+.fondo {
+    background-image: linear-gradient(280deg, #ffd400 0, #ffc100 12.5%, #ffab00 25%, #ff9413 37.5%, #f37b1f 50%, #e26326 62.5%, #d24f2c 75%, #c43d31 87.5%, #b72e36 100%);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+    /*.fondo:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.6);
+    }*/
+
+/*
+    .fondo:active {
+        transition: 0.5s;
+        filter: brightness(0.5);
+        height: 400px;
+        background-color: rgba(0,0,0,0);
+    }*/
+
+tr td a {
+    text-decoration: none;
+}

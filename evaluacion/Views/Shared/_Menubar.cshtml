@@ -1,0 +1,27 @@
+﻿<nav class="navbar navbar-expand-lg navbar-dark bg-transparent justify-content-end">
+    <div class="navigation">
+        <div class="toggle"><span></span></div>
+        <ul>
+            <li>
+                <a href="@Url.Action("Index","Home")"><i class="fas fa-box"></i>&nbsp;&nbsp;Inicio</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Index","compras")"><i class="fas fa-file-invoice"></i>&nbsp;&nbsp;Compras</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Index","ventas")"><i class="fas fa-file-invoice-dollar"></i>&nbsp;&nbsp;Ventas</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<script>
+    const navigation = document.querySelector('.navigation');
+
+    document.querySelector('.toggle').onclick = function ()
+    {
+        this.classList.toggle('active');
+        navigation.classList.toggle('active');
+    }
+</script>
+

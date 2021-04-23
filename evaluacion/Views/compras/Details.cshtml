@@ -1,0 +1,51 @@
+﻿@model evaluacion.Models.detalle_compra
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>detalle_compra</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.cantidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.monto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.monto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.compra.idcompra)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.compra.idcompra)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.producto.codigo_barras)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.producto.codigo_barras)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.iddetalle_compra }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

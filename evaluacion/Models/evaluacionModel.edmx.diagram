@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9c8a290681db4eb7bf6b4c6bafda5f49" Name="Diagram1">
+        <EntityTypeShape EntityType="evaluacionModel.bodega" Width="1.5" PointX="4.625" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="evaluacionModel.cliente" Width="1.5" PointX="1.5" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="evaluacionModel.compra" Width="1.5" PointX="2.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="evaluacionModel.detalle_compra" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="evaluacionModel.detalle_venta" Width="1.5" PointX="6" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="evaluacionModel.producto" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="evaluacionModel.producto_costo" Width="1.5" PointX="3" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="evaluacionModel.producto_descripcion" Width="1.5" PointX="3" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="evaluacionModel.producto_precioventa" Width="1.5" PointX="3" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="evaluacionModel.proveedor" Width="1.5" PointX="1.5" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="evaluacionModel.venta" Width="1.5" PointX="3.75" PointY="22.875" IsExpanded="true" />
+        <AssociationConnector Association="evaluacionModel.fk_producto_bodega" ManuallyRouted="false" />
+        <AssociationConnector Association="evaluacionModel.fk_venta_cliente" ManuallyRouted="false" />
+        <AssociationConnector Association="evaluacionModel.fk_compra_detalle" ManuallyRouted="false" />
+        <AssociationConnector Association="evaluacionModel.fk_proveedor_compra" ManuallyRouted="false" />
+        <AssociationConnector Association="evaluacionModel.fk_producto_compra" ManuallyRouted="false" />
+        <AssociationConnector Association="evaluacionModel.fk_producto_detalle" ManuallyRouted="false" />
+        <AssociationConnector Association="evaluacionModel.fk_venta_detalle" ManuallyRouted="false" />
+        <AssociationConnector Association="evaluacionModel.fk_descripcion_producto" ManuallyRouted="false" />
+        <AssociationConnector Association="evaluacionModel.fk_producto_costo" ManuallyRouted="false" />
+        <AssociationConnector Association="evaluacionModel.fk_producto_venta" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
